@@ -1,0 +1,78 @@
+@import "assets/scss/variable";
+
+.card {
+  &--accordion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 26px 0;
+    border-top: 1px solid $color-main-3;
+
+    .card__footer-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (max-width: 743px) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
+    }
+
+    .card__footer-action {
+      margin-right: 24px;
+
+      @media (max-width: 743px) {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+
+      &:last-child {
+        @media (max-width: 743px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .r-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &.open {
+      .card__opener {
+        transform: rotate(180deg);
+      }
+    }
+
+    .card__outer {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        .card__title {
+          color: $color-highlight-1;
+        }
+      }
+    }
+
+    .card__inner {
+      margin-top: 20px;
+    }
+
+    .card__opener {
+      width: 32px;
+      margin-left: auto;
+      transition: all .3s;
+    }
+
+    .card__title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      width: calc(100% - 32px);
+      padding-right: 10px;
+      transition: all .3s;
+    }
+  }
+}

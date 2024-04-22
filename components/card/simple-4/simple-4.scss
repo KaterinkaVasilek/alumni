@@ -1,0 +1,38 @@
+.card--simple-4 {
+  .card {
+    &__img {
+      margin-bottom: 24px;
+
+      img {
+        display: block;
+        width: 86px;
+        height: 86px;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+        object-position: center;
+        filter: grayscale(1);
+      }
+
+      &:hover {
+        img {
+          scale: 1;
+        }
+      }
+    }
+    &__name {
+      margin-bottom: 8px;
+    }
+    &__description {
+      margin-bottom: 24px;
+    }
+    &__data {
+      display: flex;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    &__icon {
+      margin-right: 16px;
+    }
+  }
+}

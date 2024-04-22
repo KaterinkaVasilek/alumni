@@ -1,0 +1,48 @@
+@import '../../../assets/scss/variable.scss';
+
+.article {
+  display: flex;
+  flex-direction: column;
+  line-height: 150%;
+}
+
+.article__image-link {
+  width: 100%;
+  align-self: center;
+
+  &:hover {
+    img {
+      transform: scale(0.9);
+    }
+  }
+
+  img {
+    transition: all .3s;
+  }
+}
+
+.article__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 24px;
+
+  &.no-grayscale {
+    filter: grayscale(0);
+  }
+}
+
+.article__date {
+  margin-bottom: 14px;
+  color: $color-main-5;
+}
+
+.article__title {
+  margin-bottom: 9px;
+}
+
+.article__link {
+  font-size: 18px;
+  line-height: 124%;
+  font-weight: 600;
+}

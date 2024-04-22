@@ -1,0 +1,60 @@
+@import '../../assets/scss/variable.scss';
+
+
+.video-player {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid $color-main-5;
+  gap: 16px;
+
+  @media (min-width: 744px) {
+    margin-bottom: 0;
+    padding-bottom: 32px;
+  }
+
+  &.decor-none {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.video-player__label {
+  color: $color-black-06;
+}
+
+.video {
+  position: relative;
+  min-height: 195px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #929291;
+
+  @media (min-width: 744px) {
+    min-height: 395px;
+  }
+
+  @media (min-width: 1240px) {
+    min-height: 436px;
+  }
+}
+
+.video__iframe {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.video__frame--play {
+  z-index: 1;
+}
+
+.video__button {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}

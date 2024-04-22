@@ -1,0 +1,250 @@
+@import "variable";
+
+.field {
+  margin-bottom: 2px;
+
+  &__banks-mobile {
+    display: none;
+    margin-top: 8px;
+    margin-bottom: 24px;
+
+    @media (max-width: 743px) {
+      display: block;
+    }
+  }
+
+  &--autocomplete {
+    .v-select--is-menu-active {
+      .v-select__slot {
+        input {
+          background-image: url('/img/noise.webp');
+          background-color: #F4F3F2;
+        }
+      }
+    }
+    .v-select-list {
+      background-color: #F4F3F2 !important;
+      background-image: url('/img/noise.webp') !important;
+    }
+    .v-menu {
+      &__content {
+        top: calc(100% - 23px) !important;
+        left: 0 !important;
+      }
+    }
+  }
+
+  .v-input__slot:after,
+  .v-input__slot:before {
+    display: none;
+  }
+
+  .v-text-field__slot input {
+    max-height: 48px;
+  }
+
+  .v-text-field__slot input,
+  .v-text-field__slot textarea {
+    border: 1px solid $color-main-5;
+    padding: 12px;
+
+    &:focus {
+      border-color: $color-main-6;
+    }
+  }
+
+  .v-input--selection-controls__ripple {
+    display: none;
+  }
+
+  .v-input--selection-controls__input .theme--light.v-icon {
+    color: $color-main-2;
+  }
+
+  .v-input--selection-controls .v-input__slot > .v-label,
+  .v-input--selection-controls .v-radio > .v-label {
+    margin-left: 10px;
+  }
+  .v-label {
+    font-size: 1.6rem;
+  }
+
+  .v-input--checkbox .v-label {
+    font-size: 1.4rem;
+  }
+
+  .v-input {
+    padding-top: 4px;
+    margin-top: 4px;
+  }
+
+  .theme--light.v-label {
+    color: $color-main-1;
+  }
+
+  .v-messages__message {
+    color: $color-main-2;
+  }
+
+  .error--text input, .error--text textarea {
+    border-color: $color-main-2;
+    color: $color-main-2 !important;
+  }
+
+  .field__star {
+    color: $color-main-2;
+  }
+
+  .field__label {
+    cursor: pointer;
+  }
+
+  &--banks {
+    margin-bottom: 40px;
+
+    @media (max-width: 743px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    margin-bottom: 14px;
+
+    @media (max-width: 743px) {
+      margin-bottom: 0;
+    }
+
+    .v-input--radio-group__input {
+      flex-wrap: wrap;
+      flex-direction: row !important;
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+
+    .field__list-item {
+      width: calc(25% - 8px);
+      margin-bottom: 0 !important;
+      margin-left: 4px !important;
+      margin-right: 4px !important;
+      padding: 8px 16px;
+      border-bottom: 1px solid $color-main-5;
+      display: flex;
+      justify-content: center;
+      transition: all .3s;
+
+      @media (max-width: 743px) {
+        width: calc(50% - 8px);
+        margin-bottom: 16px !important;
+      }
+
+      input[type="text"] {
+        padding: 0;
+        border: 0;
+
+        &::placeholder {
+          color: $color-main-5;
+          text-align: center;
+        }
+      }
+
+      .v-input--selection-controls__input {
+        display: none;
+      }
+
+      .v-label {
+        flex: auto;
+        margin-left: 0 !important;
+        display: block !important;
+        text-align: center;
+        color: $color-main-5;
+        padding-left: 0 !important;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &.v-item--active,
+      &:hover {
+        border-bottom-color: $color-main-2;
+
+        .v-label {
+          color: $color-main-2;
+        }
+      }
+
+      &.v-item--active {
+        .v-label {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .v-text-field__details {
+      display: none;
+    }
+
+    .v-input__slot {
+      margin-bottom: 0;
+    }
+
+    &--simple {
+      margin-bottom: 26px;
+
+      @media (max-width: 743px) {
+        margin-bottom: 10px;
+      }
+
+      .field__list-item {
+        width: calc(50% - 8px);
+        border: 1px solid transparent;
+
+        @media (max-width: 743px) {
+          width: 100%;
+          margin-bottom: 16px !important;
+        }
+
+        &.v-item--active,
+        &:hover {
+          border: 1px solid $color-main-2;
+          .v-label {
+            color: $color-main-2;
+          }
+        }
+      }
+    }
+
+    &--medium {
+      .field__list-item {
+        width: calc(50% - 8px);
+        border-color: #333;
+
+        @media (max-width: 743px) {
+          width: 100%;
+        }
+
+        .v-label {
+          color: #333;
+        }
+
+        &.v-item--active,
+        &:hover {
+          border-bottom-color: $color-main-2;
+          .v-label {
+            color: $color-main-2;
+          }
+        }
+      }
+    }
+  }
+
+  &--custom {
+
+    .v-input--selection-controls .v-input__slot > .v-label {
+      position: relative;
+      display: flex;
+      margin: 0;
+      padding-left: 13px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "assets/scss/variable";
+
+.card {
+  &__img {
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s;
+
+    &:hover {
+      img {
+        scale: 0.9;
+      }
+    }
+
+    img {
+      width: 100%;
+      transition: all .3s;
+    }
+  }
+  &__date {
+    color: $color-alternative-6;
+    margin-bottom: 20px;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+
+    &--simple-2 {
+      font-weight: 600;
+    }
+  }
+}

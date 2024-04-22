@@ -1,0 +1,135 @@
+@import "assets/scss/variable";
+
+.modal {
+  &-box-hiddener {
+    display: none;
+
+    &.vm--container {
+      display: block;
+    }
+  }
+
+  &--scrollable {
+    .vm--modal {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: auto !important;
+    }
+  }
+
+  .vm--modal {
+    overflow: visible;
+  }
+
+  &__close {
+    position: absolute;
+    top: -24px;
+    right: -12px;
+    cursor: pointer;
+
+    &--zero {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+
+    &--default {
+      padding: 64px;
+
+      @media (max-width: 1239px) {
+        padding: 48px;
+      }
+
+      @media (max-width: 743px) {
+        padding: 24px;
+      }
+
+      .modal__title {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-top: 64px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__title-default {
+
+    &--offset {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__description {
+    line-height: 150%;
+  }
+
+  &__description-default {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (max-width: 743px) {
+      margin-bottom: 28px;
+    }
+
+    &--text-left {
+      text-align: left;
+    }
+
+    &--offset-mb-0 {
+      margin-bottom: 0;
+
+      @media (max-width: 743px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.modal--success {
+  .modal__title::before {
+    background: url('../../assets/icons/success-icon.svg') no-repeat 50% 50%;
+    background-size: 100% 100%;
+  }
+
+  @media (min-width: 744px) {
+    .modal__content {
+      padding: 32px;
+    }
+  }
+}
+
+.modal--error {
+   .modal__title::before {
+     background: url('../../assets/icons/error.svg') no-repeat 50% 50%;
+     background-size: 100% 100%;
+   }
+
+   @media (min-width: 744px) {
+     .modal__content {
+       padding: 32px;
+     }
+   }
+ }

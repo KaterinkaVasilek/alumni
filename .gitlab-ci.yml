@@ -1,0 +1,31 @@
+stages:
+  - deploy to test
+  - deploy to prod
+
+deploy to test:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == "stage"'
+  tags:
+    - deploy
+  stage: deploy to test
+  script:
+    - cd /mnt/nfs/alumni_club/front-alumni-club && git pull origin stage
+    - docker exec alumni_club_dev yarn
+    - docker exec alumni_club_dev yarn build
+    - docker exec alumni_club_dev pkill -f "nuxt start"
+    - docker exec alumni_club_dev pm2 start pm2.config.js
+
+deploy to prod:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_NAME == "main"'
+  when: manual
+  tags:
+    - deploy
+  stage: deploy to prod
+  script:
+    - cd /mnt/nfs/alumni_club/front-alumni-club-prod && git pull
+    - docker exec alumni_club_prod yarn
+    - docker exec alumni_club_prod yarn build
+    - docker exec alumni_club_prod pkill -f "nuxt start"
+    - docker exec alumni_club_prod pm2 start npm -- start
+

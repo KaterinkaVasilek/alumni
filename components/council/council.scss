@@ -1,0 +1,96 @@
+.council {
+  &__inner {
+    margin-bottom: 160px;
+
+    @media (max-width: 1280px) {
+      margin-bottom: 82px;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 64px;
+    }
+  }
+  &__title {
+    display: flex;
+
+    @media (max-width: 743px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 743px) {
+      margin-bottom: 16px;
+    }
+  }
+  &__title-main {
+    @media (max-width: 1280px) {
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: 743px) {
+      margin-bottom: 0;
+    }
+  }
+  &__title-decor {
+    font-size: 7.2rem;
+    margin-left: -83px;
+    margin-top: -10px;
+
+    @media (max-width: 1280px) {
+      font-size: 6.4rem;
+      margin-left: -34px;
+      margin-top: -17px;
+    }
+
+    @media (max-width: 743px) {
+      width: 100%;
+      font-size: 5.6rem;
+      margin-left: 0;
+      padding-left: 30px;
+      margin-top: -55px;
+    }
+  }
+  &__list {
+
+    .card__img {
+      filter: grayscale(100%);
+    }
+
+    .list__inner {
+      @media (max-width: 1280px) {
+        margin-left: -8px !important;
+        margin-right: -8px !important;
+      }
+
+      @media (max-width: 743px) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+
+    .list__item {
+      @media (max-width: 1280px) {
+        width: calc(33.3333% - 16px) !important;
+        margin: 0 8px 32px 8px !important;
+      }
+
+      @media (max-width: 743px) {
+        width: 100% !important;
+        max-width: 343px;
+        margin: 0 auto 32px auto !important;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        @media (max-width: 1280px) {
+          width: calc(50% - 16px) !important;
+        }
+
+        @media (max-width: 743px) {
+          width: 100% !important;
+          max-width: 343px;
+          margin: 0 auto 32px auto !important;
+        }
+      }
+    }
+  }
+}

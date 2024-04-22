@@ -1,0 +1,19 @@
+.subscribe-round {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 270px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 135px);
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 20;
+  }
+}

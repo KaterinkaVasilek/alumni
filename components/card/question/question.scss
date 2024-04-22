@@ -1,0 +1,61 @@
+@import "assets/scss/variable";
+
+.card {
+  &--question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 26px 0;
+    border-top: 1px solid $color-main-3;
+
+    &.open {
+      .card__opener {
+        transform: rotate(180deg);
+      }
+    }
+
+    .card__outer {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        .card__title {
+          color: $color-highlight-1;
+        }
+      }
+    }
+
+    .card__content a {
+      color: $color-main-2;
+
+      &:hover {
+        color: $color-highlight-1;
+      }
+    }
+
+    .card__inner {
+      display: none;
+      margin-top: 20px;
+
+      &.open {
+        display: block;
+      }
+    }
+
+    .card__opener {
+      width: 32px;
+      margin-left: auto;
+      transition: all .3s;
+    }
+
+    .card__title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      width: calc(100% - 32px);
+      padding-right: 10px;
+      transition: all .3s;
+    }
+  }
+}

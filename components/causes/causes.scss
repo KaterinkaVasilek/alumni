@@ -1,0 +1,158 @@
+.causes {
+  margin-bottom: 100px;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 64px;
+  }
+
+  @media (max-width: 743px) {
+    margin-bottom: 87px;
+  }
+  &__list {
+
+    @media (max-width: 1239px) {
+      .list__item {
+        width: calc(50% - 24px) !important;
+        margin-left: 12px;
+        margin-right: 12px;
+        margin-bottom: 24px;
+      }
+
+      .list__inner {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 743px) {
+      .list__item {
+        width: 100% !important;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+
+    .list__item.subscribe {
+      width: calc(33.3333% - 30px);
+
+      @media (max-width: 1239px) {
+        display: flex;
+      }
+
+      .subscribe-round {
+        @media (max-width: 1239px) {
+          margin-left: auto;
+          margin-right: 107px;
+        }
+        @media (max-width: 743px) {
+          margin-left: auto;
+          margin-right: 87px;
+        }
+      }
+    }
+  }
+
+  .list--simple {
+    @media (max-width: 1239px) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    @media (max-width: 1440px) {
+      width: 100%;
+    }
+
+    @media (max-width: 1239px) {
+      min-height: 1085px;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    transform: translate(0, -100px);
+    transition-delay: 1s;
+    transition: all 3s ease-in-out;
+
+    &.animate {
+      transform: translate(0, 0);
+    }
+
+    @media (max-width: 1239px) {
+      right: -16px;
+    }
+
+    @media (max-width: 743px) {
+      height: 1550px;
+      overflow: hidden;
+    }
+  }
+  &__footer {
+    margin-top: -40px;
+    margin-left: 60px;
+    @media (max-width: 1239px) {
+      display: none;
+    }
+  }
+  &__title-img {
+    transform: translate(-20%, -20%);
+    transition-delay: 1s;
+    transition: all 3s ease-in-out;
+
+    &.animate {
+      transform: translate(0, 0);
+    }
+
+    @media (max-width: 743px) {
+      display: none;
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 90px;
+    margin-left: 64px;
+    z-index: 10;
+    position: relative;
+
+    @media (max-width: 1280px) {
+      margin-left: -24px;
+    }
+
+    @media (max-width: 1239px) {
+      margin-left: -16px;
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: 743px) {
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title-text {
+    display: flex;
+    margin-left: 64px;
+    margin-bottom: 0;
+
+    @media (max-width: 1239px) {
+      margin-left: 15px;
+    }
+
+    @media (max-width: 743px) {
+      width: 100%;
+      max-width: 310px;
+      text-align: center;
+    }
+
+    span.italic {
+      display: inline-block;
+      margin-top: -11px;
+      margin-right: 16px;
+    }
+  }
+}

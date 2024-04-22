@@ -1,0 +1,17 @@
+.news {
+  &__inner {
+    margin-bottom: 160px;
+
+    @media (max-width: 1239px) {
+      margin-bottom: 128px;
+    }
+
+    @media (max-width: 743px) {
+      margin-bottom: 96px;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+}

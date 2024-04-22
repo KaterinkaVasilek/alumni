@@ -1,0 +1,78 @@
+@import "assets/scss/variable";
+
+.honorary {
+  margin-bottom: 160px;
+  position: relative;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 112px;
+  }
+
+  @media (max-width: 743px) {
+    margin-bottom: 64px;
+  }
+
+  &--light {
+    @media (max-width: 1023px) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .slider-content {
+    height: 100%;
+  }
+  .swiper-slide {
+    height: auto;
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+    background-color: $color-alternative-1;
+  }
+  &__slide-img {
+    max-width: 260px;
+    max-height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+      filter: grayscale(1);
+    }
+  }
+
+  &__slide-name {
+    font-size: 1.8rem;
+    line-height: 1.35;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  &__slide-post {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  &__slide-year {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: $color-alternative-6;
+    margin-top: auto;
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+}

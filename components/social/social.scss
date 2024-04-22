@@ -1,0 +1,33 @@
+@import "/assets/scss/variable";
+
+.social {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -3px;
+  }
+
+  &__item {
+    margin: 0 3px 3px;
+  }
+
+  &__link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      .colored {
+        fill: $color-main-6;
+      }
+    }
+  }
+
+  &__icon {
+    path {
+      transition: all .3s;
+    }
+  }
+}

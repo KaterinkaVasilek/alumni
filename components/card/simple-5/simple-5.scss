@@ -1,0 +1,41 @@
+@import "assets/scss/variable";
+
+.card--simple-5 {
+  position: relative;
+  padding: 32px;
+  background-color: #fff;
+  z-index: 50;
+  height: 100%;
+
+  @media (max-width: 767px) {
+    padding: 24px;
+  }
+
+  .card {
+    &__title {
+      font-size: 2.4rem;
+      padding-left: 26px;
+      position: relative;
+      margin-bottom: 24px;
+
+      @media (max-width: 1023px) {
+        font-size: 2.2rem;
+        font-weight: 500;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 2rem;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: $color-main-2;
+      }
+    }
+  }
+}

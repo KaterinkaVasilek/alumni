@@ -1,0 +1,17 @@
+.news {
+  &__slider {
+    margin-bottom: 32px;
+
+    img {
+      filter: grayscale(1);
+    }
+  }
+  &__title {
+    text-align: center;
+  }
+  &__list {
+    img {
+      filter: grayscale(1);
+    }
+  }
+}

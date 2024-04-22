@@ -1,0 +1,14 @@
+.contract {
+  margin-bottom: 108px;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 96px;
+  }
+
+  @media (max-width: 743px) {
+    margin-bottom: 80px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+}

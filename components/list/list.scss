@@ -1,0 +1,60 @@
+@import "assets/scss/variable";
+
+.list {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.item-mb-none {
+    .list__item {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &.even-offset {
+    .list__item:nth-child(even) {
+      margin-top: 30px;
+    }
+  }
+
+  &.odd-offset {
+    .list__item:nth-child(odd) {
+      margin-top: 30px;
+    }
+  }
+
+  &.accordions {
+    position: relative;
+
+    .list__inner {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(50% - 15px);
+        height: 1px;
+        background-color: $color-main-3;
+
+        @media (max-width: 1023px) {
+          width: 100%;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: calc(50% - 15px);
+        height: 1px;
+        background-color: $color-main-3;
+
+        @media (max-width: 1023px) {
+         display: none;
+        }
+      }
+    }
+  }
+}

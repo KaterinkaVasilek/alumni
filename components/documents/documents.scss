@@ -1,0 +1,21 @@
+@import "assets/scss/variable";
+
+.documents {
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-link {
+    display: inline-flex;
+    align-items: center;
+    color: $color-main-2;
+  }
+
+  &__item-icon {
+    margin-right: 10px;
+  }
+}

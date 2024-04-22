@@ -1,0 +1,20 @@
+.faq {
+  &__inner {
+    margin-bottom: 200px;
+
+    @media (max-width: 1239px) {
+      margin-bottom: 128px;
+    }
+
+    @media (max-width: 743px) {
+      margin-bottom: 96px;
+    }
+  }
+  &__list {
+    .list__item {
+      @media (max-width: 1023px) {
+        width: calc(100% - 30px) !important;
+      }
+    }
+  }
+}

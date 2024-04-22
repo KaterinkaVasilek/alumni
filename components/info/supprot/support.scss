@@ -1,0 +1,64 @@
+@import "/assets/scss/variable";
+
+.info--support {
+  position: relative;
+  margin-bottom: 108px;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 96px;
+  }
+  .info {
+    &__decor {
+      position: absolute;
+      top: -64px;
+      right: 0;
+
+      @media (max-width: 1239px) {
+        display: none;
+      }
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: 60px;
+
+      @media (max-width: 1239px) {
+        margin-bottom: 48px;
+      }
+
+      @media (max-width: 743px) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__list {
+      margin-left: -8px;
+      margin-right: -8px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__list-item {
+      width: calc(50% - 16px);
+      margin: 0 8px 16px;
+      padding: 32px;
+      border: 1px solid $color-main-5;
+
+      @media (max-width: 1239px) {
+        width: calc(100% - 16px);
+      }
+
+      @media (max-width: 743px) {
+        padding: 24px;
+      }
+    }
+
+    &__list-item-text {
+      margin-bottom: 32px;
+    }
+
+    &__social-title {
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+  }
+}

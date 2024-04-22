@@ -1,0 +1,23 @@
+.article-download {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 145px;
+    gap: 24px;
+
+    @media (max-width: 743px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    @media (max-width: 743px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

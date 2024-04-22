@@ -1,0 +1,32 @@
+.card--simple-7 {
+  .card {
+    &__bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    &__content {
+      width: calc(100% - 72px);
+    }
+    &__img {
+      width: 56px;
+      height: 56px;
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+    &__name {
+      font-size: 1.6rem;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    &__data {
+      display: flex;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    &__icon {
+      margin-right: 16px;
+    }
+  }
+}

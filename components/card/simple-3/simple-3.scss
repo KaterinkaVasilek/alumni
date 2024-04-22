@@ -1,0 +1,11 @@
+.card--simple-3 {
+  .card {
+    &__img {
+      &:hover {
+        img {
+          scale: 1;
+        }
+      }
+    }
+  }
+}

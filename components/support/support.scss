@@ -1,0 +1,87 @@
+@import "assets/scss/variable";
+
+.cookies-block-show {
+  .support {
+    display: none;
+  }
+}
+
+.support {
+  width: 317px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__close {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  &__bar {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  &__inner {
+    padding: 24px;
+    border: 2px solid $color-alternative-3;
+    background-color: #fff;
+
+    @media (max-width: 1023px) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      display: flex;
+    }
+  }
+  &__text {
+    margin-bottom: 24px;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: flex;
+    width: 100%;
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @media (max-width: 1023px) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%
+    }
+  }
+
+  &__link {
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: 1023px) {
+      max-width: none;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+
+    &--sign {
+      @media (max-width: 1023px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

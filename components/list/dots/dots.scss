@@ -1,0 +1,26 @@
+@import "assets/scss/variable";
+
+.list--dots {
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  .list {
+
+    &__item {
+      position: relative;
+      padding: 24px 0 24px 26px;
+      border-top: 1px solid $color-main-5;
+
+      &:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: $color-main-2;
+        position: absolute;
+        top: 30px;
+        left: 0;
+      }
+    }
+  }
+}

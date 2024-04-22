@@ -1,0 +1,196 @@
+@import '@/assets/scss/variable.scss';
+
+.questionary {
+  max-width: 816px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 88px;
+
+  @media (max-width: 1239px) {
+    margin-bottom: 96px;
+  }
+
+  @media (max-width: 743px) {
+    margin-bottom: 80px;
+  }
+}
+
+.theme--light.v-application.questionary {
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.v-application p {
+  margin-bottom: 0;
+}
+
+.questionary__submit {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 32px;
+
+  @media (min-width: 744px) {
+    width: auto;
+    justify-self: center;
+  }
+}
+
+.questionary__form {
+  display: grid;
+
+  @media (min-width: 744px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
+}
+
+.questionary__wide {
+  @media (min-width: 744px) {
+    grid-column: span 2;
+  }
+}
+
+// Vuetify update
+
+.v-select__slot input {
+  max-height: none;
+  padding: 12px;
+  padding-right: 32px;
+  border: 1px solid $color-main-5;
+}
+
+.v-input__append-inner {
+  right: 16px;
+  top: 9px;
+  position: absolute;
+}
+
+.mdi-menu-down::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: url('@/assets/icons/arrow.svg') no-repeat 50% 50%;
+  background-size: 24px 24px;
+}
+
+.v-autocomplete__content.v-menu__content,
+.v-menu__content {
+  box-shadow: none;
+  background-image: url('../../../static/img/noise.png');
+  background-color: #f4f3f2;
+  border: 1px solid $color-main-5;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+
+  @media (max-width: 743px) {
+    left: 0 !important;
+  }
+}
+
+
+.v-select__selection {
+  position: absolute;
+  left: 12px;
+  z-index: 2;
+}
+
+.v-list-item {
+  min-height: auto;
+}
+
+.field--autocomplete .v-menu__content {
+  top: calc(100% - 25px) !important;
+  left: 0 !important;
+}
+
+.v-list-item__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.v-list-item__content {
+  padding: 4px 0;
+}
+
+.questionary .v-list {
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  flex-direction: column;
+  background-color: #f4f3f2;
+  background-image: url('../../../static/img/noise.png');
+  gap: 8px;
+}
+
+.v-application .primary--text {
+  color: inherit !important;
+}
+
+.v-list-item--link:before {
+  background-color: transparent;
+}
+
+.v-list-item--highlighted {
+  background-color: $color-select-highlight;
+}
+
+.v-list-item__title,
+.v-list-item__subtitle {
+  text-overflow: unset;
+  white-space: inherit;
+}
+
+.v-application--wrap {
+  min-height: auto;
+}
+
+.v-select--is-menu-active input,
+.v-select--is-menu-active .error--text input{
+  border: none;
+  border: 1px solid $color-main-5;
+  border-bottom-color: $color-select-highlight;
+}
+
+.listbox__no-found-text {
+  padding: 0 16px;
+}
+
+// Field update
+
+.questionary .field .field__inner-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.questionary .field .v-text-field__slot input,
+.questionary .field .v-select__slot input {
+  padding: 13px 16px;
+  padding-right: 45px;
+  background-color: #f4f3f2;
+  background-image: url('../../../static/img/noise.png');
+}
+
+.questionary .field .v-input__slot {
+  margin-bottom: 10px;
+}
+
+.questionary .field__link {
+  color: inherit;
+  text-decoration: underline;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $color-main-2;
+    }
+  }
+}
+
+.questionary .field .v-input--selection-controls .v-input__slot > .v-label,
+.field--custom .v-input--selection-controls .v-input__slot > .v-label,
+.field .v-input--selection-controls .v-radio > .v-label {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding-left: 13px;
+}
